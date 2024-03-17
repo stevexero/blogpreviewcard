@@ -48,17 +48,16 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Set up project folder and files
 - Initialized git and GitHub repo
 - index.html: Wrapped content in semantic tags
+- styles.css: Import fonts, set up reset and root variables
+- Set class names and implement base styling
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
+- BEM
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -73,6 +72,20 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ```html
 <time datetime="2023-12-21">Published 21 Dec 2023</time>
+```
+
+- I learned that there is a difference between regular (400) and medium (500) font weights. I always thought they were the same.
+
+- I learned how to implement tooltips. When a user hovers over a link, more information about that link will appear.
+
+```html
+<a
+  href="#"
+  target="_blank"
+  rel="noreferrer noopener"
+  title="Read more about HTML & CSS foundations"
+  >HTML & CSS foundations</a
+>
 ```
 
 [^1]: Source: [W3Schools.com](https://www.w3schools.com/tags/tag_time.asp)

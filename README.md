@@ -47,6 +47,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Reviewed design files for spacing, sizes, colors, etc.
 - Set up project folder and files
 - Initialized git and GitHub repo
+- index.html: Wrapped content in semantic tags
 
 ### Built with
 
@@ -63,27 +64,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- The 'time' tag along with the datetime attribute.
 
-To see how you can add code snippets, see below:
+> - The <time> tag defines a specific time (or datetime).
+> - The datetime attribute of this element is used translate the time into a
+>   machine-readable format so that browsers can offer to add date reminders through
+>   the user's calendar, and search engines can produce smarter search results.[^1]
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<time datetime="2023-12-21">Published 21 Dec 2023</time>
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+[^1]: Source: [W3Schools.com](https://www.w3schools.com/tags/tag_time.asp)
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
 

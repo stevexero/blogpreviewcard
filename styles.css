@@ -122,9 +122,15 @@ main {
 
 .card__footer {
   margin-top: 24px;
+  display: inline-block;
 }
 
 .card__footer a {
+  text-decoration: none;
+}
+
+.card__footer a figure {
+  margin: 0;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -132,18 +138,18 @@ main {
   align-items: center;
 }
 
-.card__footer a img {
+.card__footer a figure img {
   width: 32px;
 }
 
-.card__footer a p {
+.card__footer a figcaption {
   margin-left: 12px;
   font-size: 14px;
   font-weight: var(--font-weight-bold);
   color: var(--text-color-primary);
 }
 
-a.pill {
+a.card__pill {
   padding: var(--pill-padding);
   font-size: var(--font-size-pill);
   font-weight: var(--font-weight-bold);

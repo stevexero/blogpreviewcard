@@ -88,7 +88,55 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 >
 ```
 
+- I Learned about figure and figcaption and why we would use them. In my case, it was to group the profile image and the author's name, making it clear that the two are connected with eachother.
+
+> The <figure> HTML element represents self-contained content, potentially with an
+> optional caption, which is specified using the <figcaption> element. The figure,
+> its caption, and its contents are referenced as a single unit[^2].
+
+> The <figcaption> HTML element represents a caption or legend describing the restof the
+> contents of its parent <figure> element, providing the <figure> an accessible description[^3].
+
+- Before figure and figcaption
+
+```html
+<footer class="card__footer">
+  <a
+    href="#"
+    target="_blank"
+    rel="noreferrer noopener"
+    title="Read more articles by Greg Hooper"
+  >
+    <img src="/assets/images/image-avatar.webp" alt="Headshot of Greg" />
+    <p>Greg Hooper</p>
+  </a>
+</footer>
+```
+
+After figure and figcaption
+
+```html
+<footer class="card__footer">
+  <a
+    href="#"
+    target="_blank"
+    rel="noreferrer noopener"
+    title="Read more articles by Greg Hooper"
+  >
+    <figure>
+      <img
+        src="/assets/images/image-avatar.webp"
+        alt="Headshot of Greg Hooper"
+      />
+      <figcaption>Greg Hooper</figcaption>
+    </figure>
+  </a>
+</footer>
+```
+
 [^1]: Source: [W3Schools.com](https://www.w3schools.com/tags/tag_time.asp)
+[^2]: Source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
+[^3]: Source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption)
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
 

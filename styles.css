@@ -7,41 +7,48 @@
 }
 
 :root {
-  --background-color-primary: #f4d04e;
+  --color-primary: #111111;
+  --color-secondary: #7f7f7f;
+  --color-tertiary: #424242;
+  --color-accent: #f4d04e;
 
-  /* Fonts */
   --font-family: 'Figtree';
 
   --base-font-size: 14px;
 
-  --font-size-heading: 20px;
-  --font-size-body: 14px;
-  --font-size-pill: 12px;
-  --font-size-date-time: 12px;
+  --font-size-heading: 1.43rem;
+  --font-size-body: 1rem;
+  --font-size-pill: 0.86rem;
+  --font-size-date-time: 0.86rem;
+  --font-size-author-name: 1rem;
 
   --font-weight-light: 300;
   --font-weight-medium: 400;
-  --font-weight-bold: 800;
+  --font-weight-bold: 700;
 
   --font-tracking: 0;
   --font-leading: 150%;
 
-  --text-color-primary: #111111;
-  --text-color-secondary: #7f7f7f;
-  --text-color-link: #424242;
+  --rounded-large: 1.43rem;
+  --rounded-medium: 0.71rem;
+  --rounded-small: 0.29rem;
 
-  /* Borders */
-  ---border-color-primary: #111111;
+  --padding-main: 1.714rem;
+  --pill-padding: 0.14rem 0.86rem;
 
-  --rounded-large: 20px;
-  --rounded-medium: 10px;
-  --rounded-small: 4px;
+  --margin-top-body: 1.14rem;
+  --margin-left-body: 0.86rem;
 
-  /* Pills */
-  --pill-padding: 2px 12px;
+  --image-width-author: 2.286rem;
 
-  /* Margins */
-  --margin-top-body: 16px;
+  --card-border: 0 0 0.071rem 0.071rem;
+  --card-shadow: 0.571rem 0.571rem 0.071rem;
+  --card-max-width: 27.43rem;
+  --card-img-height: 14.286rem;
+  --card-body-margin-top: 1.286rem;
+  --card-body-date-time-margin-top: 0.857rem;
+  --card-body-header-margin-top: 1.143rem;
+  --card-footer-margin-top: 1.714rem;
 }
 
 html {
@@ -49,14 +56,14 @@ html {
   font-size: var(--base-font-size);
   font-weight: var(--font-weight-medium);
   font-style: normal;
-  color: var(--text-color-primary);
+  color: var(--color-primary);
   line-height: var(--font-leading);
   letter-spacing: var(--font-tracking);
 }
 
 body {
   height: 100vh;
-  background-color: var(--background-color-primary);
+  background-color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,28 +71,28 @@ body {
 }
 
 main {
-  padding: 24px;
+  padding: var(--padding-main);
 }
 
 .card {
-  max-width: 384px;
-  padding: 24px;
+  max-width: var(--card-max-width);
+  padding: var(--padding-main);
   background-color: #ffffff;
   border-radius: var(--rounded-large);
   box-shadow:
-    inset 0 0 1px 1px var(---border-color-primary),
-    8px 8px 1px var(---border-color-primary);
+    inset var(--card-border) var(--color-primary),
+    var(--card-shadow) var(--color-primary);
 }
 
 .card__header img {
   width: 100%;
-  height: 200px;
+  height: var(--card-img-height);
   border-radius: var(--rounded-medium);
   object-fit: cover;
 }
 
 .card__body {
-  margin-top: 18px;
+  margin-top: var(--card-body-margin-top);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -93,36 +100,37 @@ main {
 }
 
 .card__body time {
-  margin-top: 12px;
+  margin-top: var(--card-body-date-time-margin-top);
   font-size: var(--font-size-date-time);
 }
 
 .card__body h2 {
-  margin-top: 16px;
+  margin-top: var(--card-body-header-margin-top);
   font-size: var(--font-size-heading);
   font-weight: var(--font-weight-bold);
 }
 
 .card__body h2 a {
   text-decoration: none;
-  color: var(--text-color-primary);
+  color: var(--color-primary);
   transition: all 0.1s ease-in-out;
 }
 
 .card__body h2 a:hover {
-  color: var(--background-color-primary);
+  color: var(--color-accent);
 }
 
 .card__body p {
   margin-top: var(--margin-top-body);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-medium);
-  color: var(--text-color-secondary);
+  color: var(--color-secondary);
 }
 
 .card__footer {
-  margin-top: 24px;
+  margin-top: var(--card-footer-margin-top);
   display: inline-block;
+  vertical-align: top;
 }
 
 .card__footer a {
@@ -139,14 +147,14 @@ main {
 }
 
 .card__footer a figure img {
-  width: 32px;
+  width: var(--image-width-author);
 }
 
 .card__footer a figcaption {
-  margin-left: 12px;
-  font-size: 14px;
+  margin-left: var(--margin-left-body);
+  font-size: var(--font-size-author-name);
   font-weight: var(--font-weight-bold);
-  color: var(--text-color-primary);
+  color: var(--color-primary);
 }
 
 a.card__pill {
@@ -154,33 +162,53 @@ a.card__pill {
   font-size: var(--font-size-pill);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
-  background-color: var(--background-color-primary);
-  color: var(--text-color-primary);
+  background-color: var(--color-accent);
+  color: var(--color-primary);
   border-radius: var(--rounded-small);
 }
 
 .attributions {
   font-weight: var(--font-weight-light);
-  color: var(--text-color-secondary);
+  color: var(--color-secondary);
   position: absolute;
   bottom: 0;
 }
 
 .attributions a {
-  color: var(--text-color-link);
+  color: var(--color-tertiary);
 }
 
 @media (min-width: 768px) {
   :root {
     --base-font-size: 16px;
 
-    --font-size-heading: 24px;
-    --font-size-body: 16px;
+    --font-size-heading: 1.5rem;
+    --font-size-body: 1rem;
+    --font-size-author-name: 0.875rem;
+    --font-size-pill: 0.875rem;
+    --font-size-date-time: 0.875rem;
 
-    --font-size-pill: 14px;
+    --margin-top-body: 1.125rem;
 
-    --font-size-date-time: 14px;
+    --rounded-large: 1.25rem;
+    --rounded-medium: 0.625rem;
+    --rounded-small: 0.25rem;
 
-    --margin-top-body: 18px;
+    --padding-main: 1.5rem;
+    --pill-padding: 0.125rem 0.75rem;
+
+    --margin-top-body: 1.125rem;
+    --margin-left-body: 0.75rem;
+
+    --image-width-author: 2rem;
+
+    --card-border: 0 0 0.0625rem 0.0625rem;
+    --card-shadow: 0.5rem 0.5rem 0.0625rem;
+    --card-max-width: 24rem;
+    --card-img-height: 12.5rem;
+    --card-body-margin-top: 1.125rem;
+    --card-body-date-time-margin-top: 0.75rem;
+    --card-body-header-margin-top: 1rem;
+    --card-footer-margin-top: 1.5rem;
   }
 }

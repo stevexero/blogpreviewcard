@@ -50,6 +50,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - index.html: Wrapped content in semantic tags
 - styles.css: Import fonts, set up reset and root variables
 - Set class names and implement base styling
+- Refactor for semantic, accessibility, and BEM compliance
+- Refactor font sizes to relative units
+- Refactor margins and paddings to relative units
 
 ### Built with
 
@@ -58,8 +61,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - BEM
 - Flexbox
 - Mobile-first workflow
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 

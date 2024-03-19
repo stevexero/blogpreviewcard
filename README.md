@@ -143,3 +143,9 @@ I will continue focusing on semantic HTML, a11y, mobile-first development, and T
 - GitHub - [Steve Xero](https://www.github.com/stevexero)
 - Frontend Mentor - [@stevexero](https://www.frontendmentor.io/profile/stevexero)
 - X - [@steve_xero](https://www.twitter.com/steve_xero)
+
+## Shoutouts
+
+- I want to give a shoutout to [Mirjax200 from Frontend Mentor](https://www.frontendmentor.io/profile/Mirjax2000) for pointing out my bad use of relative units. [See the comment here](https://www.frontendmentor.io/solutions/blog-preview-card-focusing-on-relative-units-TnG-cKLd-G).
+
+- I'd also like to shoutout [Corina Murg](https://twitter.com/CorinaMurg) for giving me feedback and providing me with awesome resources on accessibility, particularly [this](https://ashleemboyer.com/blog/why-you-should-use-px-units-for-margin-padding-and-other-spacing-techniques#after-updating-to-px-units) article about using px units for margins, padding, and other spacing techniques.

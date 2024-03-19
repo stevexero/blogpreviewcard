@@ -14,13 +14,11 @@
 
   --font-family: 'Figtree';
 
-  --base-font-size: 14px;
-
-  --font-size-heading: 1.43rem;
-  --font-size-body: 1rem;
-  --font-size-pill: 0.86rem;
-  --font-size-date-time: 0.86rem;
-  --font-size-author-name: 1rem;
+  --font-size-heading: 1.4285em;
+  --font-size-body: 1em;
+  --font-size-pill: 0.875em;
+  --font-size-date-and-time: 0.875em;
+  --font-size-author-name: clamp(14px, 0.875em, 80px);
 
   --font-weight-light: 300;
   --font-weight-medium: 400;
@@ -29,31 +27,13 @@
   --font-tracking: 0;
   --font-leading: 150%;
 
-  --rounded-large: 1.43rem;
-  --rounded-medium: 0.71rem;
-  --rounded-small: 0.29rem;
-
-  --padding-main: 1.714rem;
-  --pill-padding: 0.14rem 0.86rem;
-
-  --margin-top-body: 1.14rem;
-  --margin-left-body: 0.86rem;
-
-  --image-width-author: 2.286rem;
-
-  --card-border: 0 0 0.071rem 0.071rem;
-  --card-shadow: 0.571rem 0.571rem 0.071rem;
-  --card-max-width: 27.43rem;
-  --card-img-height: 14.286rem;
-  --card-body-margin-top: 1.286rem;
-  --card-body-date-time-margin-top: 0.857rem;
-  --card-body-header-margin-top: 1.143rem;
-  --card-footer-margin-top: 1.714rem;
+  /* Allows for width of card to scale with user's browser font size */
+  --card-max-width: clamp(327px, 24em, 100vw);
 }
 
 html {
   font-family: var(--font-family), sans-serif;
-  font-size: var(--base-font-size);
+  font-size: 14px;
   font-weight: var(--font-weight-medium);
   font-style: normal;
   color: var(--color-primary);
@@ -62,7 +42,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--color-accent);
   display: flex;
   align-items: center;
@@ -71,28 +51,28 @@ body {
 }
 
 main {
-  padding: var(--padding-main);
+  padding: 24px;
 }
 
 .card {
   max-width: var(--card-max-width);
-  padding: var(--padding-main);
+  padding: 24px;
   background-color: #ffffff;
-  border-radius: var(--rounded-large);
+  border-radius: 20px;
   box-shadow:
-    inset var(--card-border) var(--color-primary),
-    var(--card-shadow) var(--color-primary);
+    inset 0 0 1px 1px var(--color-primary),
+    8px 8px 1px var(--color-primary);
 }
 
 .card__header img {
   width: 100%;
-  height: var(--card-img-height);
-  border-radius: var(--rounded-medium);
+  height: 200px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
 .card__body {
-  margin-top: var(--card-body-margin-top);
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,12 +80,12 @@ main {
 }
 
 .card__body time {
-  margin-top: var(--card-body-date-time-margin-top);
-  font-size: var(--font-size-date-time);
+  margin-top: 12px;
+  font-size: var(--font-size-date-and-time);
 }
 
 .card__body h2 {
-  margin-top: var(--card-body-header-margin-top);
+  margin-top: 16px;
   font-size: var(--font-size-heading);
   font-weight: var(--font-weight-bold);
 }
@@ -121,14 +101,14 @@ main {
 }
 
 .card__body p {
-  margin-top: var(--margin-top-body);
+  margin-top: 18px;
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-medium);
   color: var(--color-secondary);
 }
 
 .card__footer {
-  margin-top: var(--card-footer-margin-top);
+  margin-top: 24px;
   display: inline-block;
   vertical-align: top;
 }
@@ -147,29 +127,31 @@ main {
 }
 
 .card__footer a figure img {
-  width: var(--image-width-author);
+  width: 32px;
 }
 
 .card__footer a figcaption {
-  margin-left: var(--margin-left-body);
+  margin-left: 12px;
   font-size: var(--font-size-author-name);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
 }
 
 a.card__pill {
-  padding: var(--pill-padding);
+  padding: 2px 12px;
   font-size: var(--font-size-pill);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   background-color: var(--color-accent);
   color: var(--color-primary);
-  border-radius: var(--rounded-small);
+  border-radius: 4px;
 }
 
 .attributions {
+  font-size: 16px;
   font-weight: var(--font-weight-light);
   color: var(--color-secondary);
+  text-align: center;
   position: absolute;
   bottom: 0;
 }
@@ -178,37 +160,24 @@ a.card__pill {
   color: var(--color-tertiary);
 }
 
-@media (min-width: 768px) {
+/* 768px */
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+
   :root {
-    --base-font-size: 16px;
+    --font-size-heading: 1.5em;
+  }
 
-    --font-size-heading: 1.5rem;
-    --font-size-body: 1rem;
-    --font-size-author-name: 0.875rem;
-    --font-size-pill: 0.875rem;
-    --font-size-date-time: 0.875rem;
+  .card {
+    box-shadow:
+      inset 0 0 1px 1px var(--color-primary),
+      16px 16px 1px var(--color-primary);
+  }
 
-    --margin-top-body: 1.125rem;
-
-    --rounded-large: 1.25rem;
-    --rounded-medium: 0.625rem;
-    --rounded-small: 0.25rem;
-
-    --padding-main: 1.5rem;
-    --pill-padding: 0.125rem 0.75rem;
-
-    --margin-top-body: 1.125rem;
-    --margin-left-body: 0.75rem;
-
-    --image-width-author: 2rem;
-
-    --card-border: 0 0 0.0625rem 0.0625rem;
-    --card-shadow: 0.5rem 0.5rem 0.0625rem;
-    --card-max-width: 24rem;
-    --card-img-height: 12.5rem;
-    --card-body-margin-top: 1.125rem;
-    --card-body-date-time-margin-top: 0.75rem;
-    --card-body-header-margin-top: 1rem;
-    --card-footer-margin-top: 1.5rem;
+  /* Scales author profile with user's desired browser font setting */
+  .card__footer a figure img {
+    width: 2em;
   }
 }

@@ -44,7 +44,6 @@ Users should be able to:
 - Set class names and implement base styling
 - Refactor for semantic, accessibility, and BEM compliance
 - Refactor font sizes to relative units
-- Refactor margins and paddings to relative units
 
 ### Built with
 
@@ -126,6 +125,8 @@ After figure and figcaption
   </a>
 </footer>
 ```
+
+- I learned how to use the computed tab in the developer tools
 
 [^1]: Source: [W3Schools.com](https://www.w3schools.com/tags/tag_time.asp)
 [^2]: Source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
